@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Smartstar Digital -Your Branding Partner</title>
+  <meta name="description" content="Smartstar Digital delivers graphic design, web development, social media management, AI masterclasses, tutoring, shopping assistance & chess coaching." />
+  <meta name="author" content="Your Name" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph (helps sharing/preview; still just meta HTML, no CSS/JS) -->
+  <meta property="og:title" content="Accessible HTML5 Starter – Learn Semantic Markup, A11y & SEO" />
+  <meta property="og:description" content="Semantic HTML5 with accessibility landmarks and SEO-friendly structure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://SmartstarDigital.com/" />
+</head>
+
+<body>
+  <!-- Skip link improves keyboard/screen-reader navigation -->
+  <a href="#main">Skip to main content</a>
+
+  <header>
+    <p><strong>Smartstar Digital</strong></p>
+    <p>Your simple, perfect and branding partner.</p>
+
+    <!-- Primary navigation landmark -->
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#learn">our services</a></li>
+        <li><a href="#faq">Our Values</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Site-wide search with explicit labeling -->
+    <form action="/search" method="get" role="search" aria-label="Site search">
+      <label for="q">Search the site:</label>
+      <input id="q" name="q" type="search" />
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <!-- Optional breadcrumb landmark shows page position -->
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Smartstar Digital</li>
+    </ol>
+  </nav>
+
+  <main id="main">
+    <!-- Use one H1 per page; H2s/H3s form a clear hierarchy -->
+    <h1>Your simple, perfect and branding partner.</h1>
+
+    <article>
+      <header>
+        <h2 id="learn">Why Smartstar Digital, TutorPlus, and SwiftDrop</h2>
+        <p>
+          <time datetime="2025-08-28">August 28, 2025</time> • 2 min read
+        </p>
+      </header>
+
+      <section>
+        <h3>Smart Solutions for the Digital Age</h3>
+        <p>
+          Our services: <code>Graphics</code>, <code>Web Dev</code>, <code>Social media Management</code>,
+          <code>AI masterclasses</code>, <code>Tutoring</code>, <code>Chess coaching</code>, and
+          <code>Shopping Assistance</code> makes us unique.
+        </p>
+      </section>
+
+      <section>
+        <h3>🎨 Before & After Graphics/Web Projects.</h3>
+        <p>
+        From plain to powerful 🚀✨ See the Smartstar Digital transformation — 
+        </p>
+        <figure>
+          <img src="landmarks-example" />
+          <figcaption>because your brand deserves the best first impression. #BeforeAndAfter #SmartstarDigital
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h3>📚 Quick AI/Masterclass Snippets</h3>
+        <p>
+          👉  1-minute AI hack that’ll change how you work. 🚀 #SmartAI #SmartstarDigital
+        </p>
+      </section>
+      <section>
+        <h3>♟️ Chess Challenges</h3>
+        <p>
+          👉  Your move! ♟ Can you checkmate in 2? #ChessChallenge #SmartstarDigital
+        </p>
+      </section>
+      <section>
+        <h3>🛒 Shopping Assistance Hacks</h3>
+        <p>
+          👉  Save smarter, shop better. 🛒 Here’s how to cut 20% today! #SmartShopping #SmartstarDigital  
+          </p>
+      </section>
+       <section>
+        <h3>👩‍🏫 Tutoring Proofs</h3>
+        <p>
+         👉  From struggle ➝ success 📚✨ See how Smartstar tutoring delivers results. #SmartLearning    
+         </p>
+      </section>
+       <section>
+        <h3>💡 Behind the Scenes</h3>
+        <p>
+          👉  Real people. Real passion. 💡 Go behind the scenes at Smartstar Digital. #TeamSmartstar  
+          </p>
+      </section>
+    </article>
+
+    <aside aria-label="Smartstar Digital">
+      <h2>🌟 Smartstar Digital — All-in-One Hub</h2>
+      <ul>
+        <li>🎨 Graphics <code>Creative designs that captivate.</code></li>
+        <li>🌐 Web Dev → Websites that work & wow.</li>
+        <li>📱 Social Media → Manage, grow & shine online.</li>
+        <li>🤖 AI Masterclasses → Learn smart hacks for the future.</li>
+        <li>👩‍🏫 Tutoring → Simple lessons, real results.</li>
+        <li>🛒 Shopping Assistance → Smart deals, smarter savings.</li>
+        <li>♟️ Chess Coaching → Sharpen your mind, master the board.</li>
+      </ul>
+    </aside>
+
+    <section id="Values" aria-labelledby="Values headings">
+      <h3 id="Values-heading">🚀 Smartstar Digital = Creativity + Learning + Smart Living.</h3>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <address>
+        Email: <a href="simonmasila004@gmail.com">simonmasila004@gmail.com</a><br />
+        P.O Box 232-01900, Ruiru town --Kiambu
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <time datetime="2025">2025</time> SmartstarDigital. All rights reserved.</p>
+
+    <!-- Footer navigation landmark -->
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#learn">Learn</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">License</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
