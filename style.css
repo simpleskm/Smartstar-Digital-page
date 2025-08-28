@@ -1,0 +1,241 @@
+<style>
+/* Reset / base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link */
+a[href="#main"] {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+a[href="#main"]:focus {
+  top: 0;
+}
+
+/* Header with gradient */
+header {
+  background: linear-gradient(135deg, #004aad, #0077ff);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header p:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header p:nth-child(2) {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
+/* Navigation */
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+header nav a:hover,
+header nav a[aria-current="page"] {
+  color: #ffe;
+  border-bottom: 2px solid #fff;
+}
+
+/* Search */
+form[role="search"] {
+  margin-top: 1rem;
+}
+form[role="search"] label {
+  margin-right: 0.5rem;
+}
+form[role="search"] input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+form[role="search"] button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  background: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+form[role="search"] button:hover {
+  background: #eee;
+}
+
+/* Breadcrumb */
+nav[aria-label="Breadcrumb"] {
+  background: #f0f2f8;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+nav[aria-label="Breadcrumb"] ol {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+nav[aria-label="Breadcrumb"] li::after {
+  content: "›";
+  margin-left: 0.5rem;
+  color: #666;
+}
+nav[aria-label="Breadcrumb"] li:last-child::after {
+  content: "";
+}
+
+/* Main */
+main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background: linear-gradient(90deg, #004aad, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2 {
+  font-size: 1.6rem;
+  margin: 1.5rem 0 1rem;
+  color: #004aad;
+}
+h3 {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  color: #333;
+}
+
+/* Article & sections */
+article {
+  margin-bottom: 2rem;
+}
+section {
+  margin-bottom: 1.5rem;
+}
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+figure img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Aside highlight box */
+aside {
+  background: linear-gradient(135deg, #eef6ff, #e1f0ff);
+  border-left: 5px solid #0077ff;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+aside h2 {
+  margin-top: 0;
+}
+
+/* Contact */
+address {
+  font-style: normal;
+  line-height: 1.6;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+}
+
+/* Footer with gradient */
+footer {
+  background: linear-gradient(135deg, #004aad, #001f54);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+footer nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+footer nav a:hover {
+  color: white;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+</style>
